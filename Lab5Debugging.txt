@@ -1,0 +1,17 @@
+#5  0x000055555555a80e in analyzeCoActors (imdb=...) at Lab5.cpp:152
+#6  0x000055555555a435 in main (argc=2, argv=0x7fffffffe038) at Lab5.cpp:114
+
+1. Describe the reason the program goes into endless loop, under what kind of user
+input? - A string is used as the input, 
+        the endless loop was caused by not clearing the fail state. 
+
+2. When the program goes into endless loop, what is the value of
+input_to_check? - 
+
+3. Provide your solution. (either by coding statement or by description)
+    SOLUTION: I fixed the variable on line 151 in Lab5.cpp to match the .begin() 
+    and .end() methods as seen in: "coactors.begin(); ia != coactors.end()". 
+    Additionally, I cleared the fail state after the input validation stage, 
+    as well as made it return 0 instead of just breaking inside the if statement
+    if "Q" or "q" was entered. Now it functions properly and exits the 
+    program as intended.
